@@ -31,7 +31,7 @@
             directionsRenderer.setDirections(response);
             
             
-            var service new google.maps.places.PlacesService(map);
+            var service = new google.maps.places.PlacesService(map);
             response.geocoded_waypoints.forEach(function(e){
               service.getDetails({placeId: e.place_id}, function(place, status){
                 if(status == google.maps.placesPlacesServiceStatus.OK){
